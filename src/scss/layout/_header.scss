@@ -1,0 +1,69 @@
+@use '../util' as *;
+
+.header {
+  height: rem(540);
+  position: relative;
+  background: url('../images/mobile/image-header.jpg') center / cover no-repeat;
+  overflow-x: hidden;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding: rem(32) rem(24) 0;
+  }
+
+  &__menu-btn {
+    width: max-content;
+    height: max-content;
+    display: flex;
+  }
+
+  &__nav {
+    width: min(100% - rem(48), rem(400));
+    position: absolute;
+    inset: rem(106) 50% auto;
+    transform: translateX(-50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 300ms ease;
+
+    @keyframes slide-down {
+      from {
+        transform: translateX(-50%) translateY(-10%);
+      }
+      to {
+        transform: translateX(-50%) translateY(0);
+      }
+    }
+
+    .header.active & {
+      animation: slide-down 300ms ease forwards;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: rem(28);
+    background-color: $clr-white;
+    padding: rem(42) rem(24) rem(38);
+  }
+
+  &__link {
+    color: $clr-dark-grayish-blue;
+    padding: rem(4);
+
+    &--contact {
+      width: rem(140);
+      height: rem(56);
+      justify-content: center;
+      align-items: center;
+      background-color: $clr-yellow;
+      color: $clr-black;
+      border-radius: rem(33);
+    }
+  }
+}

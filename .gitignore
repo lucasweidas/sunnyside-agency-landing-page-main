@@ -16,7 +16,4 @@
 .prettierignore
 
 #Other Files
-design
-style-guide.md
-README-template.md
-README1.md
+node_modules

@@ -1,0 +1,27 @@
+{
+  "name": "sunnyside-agency-landing-page-main",
+  "version": "1.0.0",
+  "description": "## Welcome! 👋",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasweidas/sunnyside-agency-landing-page-main.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucasweidas/sunnyside-agency-landing-page-main/issues"
+  },
+  "homepage": "https://github.com/lucasweidas/sunnyside-agency-landing-page-main#readme",
+  "dependencies": {
+    "sass": "^1.53.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}

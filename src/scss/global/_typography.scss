@@ -1,0 +1,36 @@
+@use '../util' as *;
+
+body {
+  font-family: $ff-barlow;
+  font-size: rem(18);
+  font-weight: 600;
+}
+
+h1,
+h2,
+figcaption,
+.header__link--contact,
+.about__link {
+  font-family: $ff-fraunces;
+}
+
+.header__heading {
+  font-size: rem(32);
+  font-weight: 900;
+  letter-spacing: rem(5);
+  text-transform: uppercase;
+}
+
+.header__link {
+  font-size: rem(20);
+
+  &--contact {
+    font-size: rem(16);
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+}
+
+.about__link {
+  font-weight: 900;
+}

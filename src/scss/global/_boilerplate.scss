@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a,
+a:active,
+a:visited {
+  & {
+    display: inline-flex;
+  }
+  text-decoration: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+svg,
+svg * {
+  pointer-events: none;
+}
+
+ul {
+  list-style: none;
+}
