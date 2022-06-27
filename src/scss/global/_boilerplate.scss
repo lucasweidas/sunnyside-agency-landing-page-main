@@ -1,9 +1,15 @@
+@use '../util' as *;
+
 *,
 *::before,
 *::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: $clr-grayish-white;
 }
 
 a,
@@ -28,4 +34,13 @@ svg * {
 
 ul {
   list-style: none;
+}
+
+picture {
+  width: 100%;
+  display: flex;
+
+  img {
+    width: 100%;
+  }
 }

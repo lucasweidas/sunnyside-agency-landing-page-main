@@ -1,0 +1,36 @@
+@use '../util' as *;
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: rem(64);
+  text-align: center;
+  padding: rem(64) rem(24) rem(90);
+
+  &__box {
+    width: min(100%, rem(430));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: rem(38);
+  }
+
+  &__avatar {
+    $size: rem(72);
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+  }
+
+  &__comment {
+    color: $clr-very-dark-grayish-blue;
+  }
+
+  &__author {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(14);
+    color: $clr-very-dark-desaturated-blue;
+  }
+}

@@ -58,12 +58,17 @@
 
       <div class="header__bottom">
         <h1 class="header__heading">We are creatives</h1>
+        <svg class="header__arrow" width="36" height="114" viewBox="0 0 36 114" xmlns="http://www.w3.org/2000/svg">
+          <g stroke="#FFF" stroke-width="6" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 3v100M3 95.484l15 15 15-15" />
+          </g>
+        </svg>
       </div>
     </header>
 
     <main>
       <div class="about" id="about">
-        <div class="about__box">
+        <div class="about__box about__box--transform">
           <picture class="about__picture">
             <source media="(min-width: 1024px)" srcset="images/desktop/image-transform.jpg" type="image/jpeg" />
             <img src="images/mobile/image-transform.jpg" alt="An egg on a yellow background" />
@@ -74,11 +79,11 @@
               We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the
               marketing for you.
             </p>
-            <a class="about__link" href="#">Learn more</a>
+            <a class="about__link about__link--yellow" href="#">Learn more</a>
           </section>
         </div>
 
-        <div class="about__box">
+        <div class="about__box about__box--stand">
           <picture class="about__picture">
             <source media="(min-width: 1024px)" srcset="images/desktop/image-stand-out.jpg" type="image/jpeg" />
             <img src="images/mobile/image-stand-out.jpg" alt="A red cup on a red background" />
@@ -89,22 +94,35 @@
               Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in
               digital places.
             </p>
-            <a class="about__link" href="#">Learn more</a>
+            <a class="about__link about__link--red" href="#">Learn more</a>
           </section>
         </div>
       </div>
 
       <div class="services" id="services">
-        <section class="services__box">
-          <h2 class="services__heading">Graphic design</h2>
-          <p class="services__description">
-            Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
-          </p>
-        </section>
-        <section class="services__box">
-          <h2 class="services__heading">Photography</h2>
-          <p class="services__description">Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
-        </section>
+        <div class="services__card">
+          <picture class="services__picture">
+            <source media="(min-width: 1024px)" srcset="images/desktop/image-graphic-design.jpg" type="image/jpeg" />
+            <img src="images/mobile/image-graphic-design.jpg" alt="Two cherries" />
+          </picture>
+          <section class="services__content services__content--graphic">
+            <h2 class="services__heading">Graphic design</h2>
+            <p class="services__description">
+              Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
+            </p>
+          </section>
+        </div>
+
+        <div class="services__card">
+          <picture class="services__picture">
+            <source media="(min-width: 1024px)" srcset="images/desktop/image-photography.jpg" type="image/jpeg" />
+            <img src="images/mobile/image-photography.jpg" alt="Two cherries" />
+          </picture>
+          <section class="services__content services__content--photography">
+            <h2 class="services__heading">Photography</h2>
+            <p class="services__description">Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+          </section>
+        </div>
       </div>
 
       <section class="testimonials">
@@ -167,7 +185,7 @@
       </div>
     </main>
 
-    <footer id="footer">
+    <footer class="footer" id="footer">
       <a href="/" class="footer__logo" aria-label="sunnyside agency">
         <svg width="124" height="24" viewBox="0 0 124 24" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -229,8 +247,8 @@
         </a>
       </div>
       <p class="footer__attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer noopener">Frontend Mentor</a>. Coded with
-        <i class="fa-solid fa-heart"></i> by <a href="https://github.com/LucasWeidas" target="_blank" rel="noreferrer noopener">Lucas Weidas</a>.
+        Challenge by <a class="footer__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer noopener">Frontend Mentor</a>. Coded with
+        <i class="fa-solid fa-heart"></i> by <a class="footer__link" href="https://github.com/LucasWeidas" target="_blank" rel="noreferrer noopener">Lucas Weidas</a>.
       </p>
     </footer>
   </body>

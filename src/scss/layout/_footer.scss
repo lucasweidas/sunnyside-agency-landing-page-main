@@ -1,0 +1,57 @@
+@use '../util' as *;
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $clr-ligh-cyan;
+  color: $clr-dark-cyan;
+  padding: rem(64) rem(24) rem(24);
+
+  &__logo {
+    color: inherit;
+
+    svg {
+      width: rem(170);
+      height: rem(34);
+    }
+
+    path {
+      fill: currentColor;
+    }
+  }
+
+  &__menu {
+    margin-block: rem(40) rem(90);
+  }
+
+  &__list {
+    display: flex;
+    column-gap: rem(58);
+  }
+
+  &__link {
+    color: $clr-dark-moderate-cyan;
+    transition: color 150ms;
+
+    &:hover,
+    &:focus-visible {
+      color: $clr-white;
+
+      path {
+        fill: currentColor;
+      }
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    column-gap: rem(28);
+  }
+
+  &__attribution {
+    text-align: center;
+    padding-block-start: rem(24);
+  }
+}

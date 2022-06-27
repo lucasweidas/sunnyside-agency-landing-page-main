@@ -6,19 +6,25 @@ body {
   font-weight: 600;
 }
 
+p {
+  font-size: rem(16);
+  line-height: rem(23.5);
+}
+
 h1,
 h2,
 figcaption,
 .header__link--contact,
 .about__link {
+  font-weight: 900;
   font-family: $ff-fraunces;
 }
 
 .header__heading {
   font-size: rem(32);
-  font-weight: 900;
   letter-spacing: rem(5);
   text-transform: uppercase;
+  color: $clr-white;
 }
 
 .header__link {
@@ -31,6 +37,30 @@ figcaption,
   }
 }
 
+.about__heading {
+  font-size: rem(28);
+  color: $clr-very-dark-desaturated-blue;
+}
+
 .about__link {
-  font-weight: 900;
+  font-size: rem(16);
+  text-transform: uppercase;
+  color: $clr-very-dark-desaturated-blue;
+}
+
+.testimonials__heading {
+  font-size: rem(14);
+  letter-spacing: rem(3);
+  text-transform: uppercase;
+  color: $clr-grayish-blue;
+}
+
+.testimonials__occupation {
+  font-family: $ff-barlow;
+  font-size: rem(14);
+  color: $clr-grayish-blue;
+}
+
+.footer__attribution {
+  font-size: rem(16);
 }
