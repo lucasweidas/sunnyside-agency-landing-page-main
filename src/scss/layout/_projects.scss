@@ -11,13 +11,16 @@
   &__picture {
     max-height: rem(300);
 
-    img {
-      object-fit: cover;
-      object-position: center 80%;
-    }
-
     @include breakpoint(medium) {
       max-height: none;
+    }
+
+    @include breakpoint(large) {
+      max-height: rem(800);
+    }
+
+    img {
+      object-position: center 80%;
     }
   }
 }

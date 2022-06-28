@@ -1,31 +1,50 @@
 @use '../util' as *;
 
 .testimonials {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: rem(64);
   text-align: center;
   padding: rem(64) rem(24) rem(90);
 
-  &__box {
-    width: min(100%, rem(430));
+  @include breakpoint(large) {
+    padding-block: rem(150);
+  }
+
+  &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: rem(38);
+    gap: rem(64) rem(40);
+    margin-block-start: rem(64);
+
+    @include breakpoint(large) {
+      flex-direction: row;
+      justify-content: center;
+      margin-block-start: rem(82);
+    }
+  }
+
+  &__content {
+    max-width: rem(430);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include breakpoint(large) {
+      max-width: rem(350);
+    }
   }
 
   &__avatar {
-    $size: rem(72);
-    width: $size;
-    height: $size;
+    width: rem(72);
+    height: rem(72);
     border-radius: 50%;
   }
 
   &__comment {
-    color: $clr-very-dark-grayish-blue;
+    padding-block: rem(38);
 
+    @include breakpoint(large) {
+      padding-block: rem(64) rem(74);
+    }
   }
 
   &__author {

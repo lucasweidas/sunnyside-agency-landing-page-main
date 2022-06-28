@@ -9,6 +9,7 @@
   }
 
   &__card {
+    width: 100%;
     position: relative;
   }
 
@@ -16,13 +17,16 @@
     max-height: rem(600);
 
     img {
-      object-fit: cover;
       object-position: center 45%;
+    }
+
+    @include breakpoint(large) {
+      max-height: rem(800);
     }
   }
 
   &__content {
-    width: min(100%, rem(506));
+    width: min(100%, rem(430));
     position: absolute;
     left: 50%;
     bottom: 10%;

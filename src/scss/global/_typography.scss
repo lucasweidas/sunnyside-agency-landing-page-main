@@ -34,10 +34,15 @@ figcaption,
   @include breakpoint(medium) {
     font-size: rem(42);
   }
+
+  @include breakpoint(large) {
+    font-size: rem(58);
+    letter-spacing: rem(11);
+  }
 }
 
 .header__link {
-  font-size: rem(20);
+  font-size: rem(18);
 
   &--contact {
     font-size: rem(16);
@@ -53,31 +58,37 @@ figcaption,
   @include breakpoint(medium) {
     font-size: clamp(rem(28), 3.5vw, rem(32));
   }
+
+  @include breakpoint(large) {
+    font-size: rem(38);
+    letter-spacing: rem(1.2);
+  }
 }
 
 .about__link {
-  font-size: clamp(rem(16), 3vw, rem(18));
   font-size: rem(16);
   text-transform: uppercase;
   color: $clr-very-dark-desaturated-blue;
+}
 
-  @include breakpoint(medium) {
-    font-size: clamp(rem(16), 2vw, rem(18));
-  }
+.services__heading {
+  font-size: rem(28);
 }
 
 .testimonials__heading {
   font-size: rem(16);
-  letter-spacing: em(2);
+  letter-spacing: rem(2);
   text-transform: uppercase;
   color: $clr-grayish-blue;
 
   @include breakpoint(medium) {
-    font-size: rem(18);
+    font-size: rem(20);
+    letter-spacing: rem(5);
   }
 }
 
 .testimonials__comment {
+  color: $clr-dark-blue;
   line-height: 1.6em;
 }
 

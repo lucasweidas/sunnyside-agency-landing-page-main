@@ -7,15 +7,22 @@
   overflow-x: hidden;
 
   @include breakpoint(medium) {
-    height: rem(650);
+    height: rem(700);
     background-image: url('../images/desktop/image-header.jpg');
   }
 
+  @include breakpoint(large) {
+    height: rem(800);
+    background-position: center;
+  }
+
   &__top {
+    width: min(100%, rem(1800));
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: rem(32) rem(24) 0;
+    margin-inline: auto;
 
     @include breakpoint(medium) {
       padding-inline: rem(32);
@@ -23,10 +30,9 @@
   }
 
   &__logo {
-
     @include breakpoint(medium) {
       svg {
-        width: rem(160);
+        width: clamp(rem(160), 18vw, rem(170));
         height: rem(34);
       }
     }
@@ -100,7 +106,7 @@
     position: relative;
     color: $clr-dark-grayish-blue;
     padding: rem(4);
-    
+
     @include breakpoint(medium) {
       &:not(&--contact) {
         color: $clr-white;
@@ -134,7 +140,7 @@
       background-color: $clr-yellow;
       color: $clr-black;
       border-radius: rem(33);
-      
+
       @include breakpoint(medium) {
         background-color: $clr-white;
         transition-duration: 200ms;
@@ -157,6 +163,15 @@
     position: relative;
     text-align: center;
     margin-block-start: rem(98);
+
+    @include breakpoint(medium) {
+      row-gap: rem(68);
+    }
+
+    @include breakpoint(large) {
+      row-gap: rem(94);
+      margin-block-start: rem(110);
+    }
   }
 
   &__arrow {

@@ -16,7 +16,6 @@
   }
 
   &__picture {
-    width: 100%;
     max-height: rem(400);
     display: flex;
 
@@ -24,14 +23,20 @@
       max-height: none;
     }
 
-    img {
-      width: 100%;
-      object-fit: cover;
+    @include breakpoint(large) {
+      max-height: rem(800);
     }
   }
 
-  &__content {
+  &__section {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content {
+    max-width: rem(550);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,26 +47,39 @@
     @include breakpoint(medium) {
       padding-block: 0;
     }
+
+    @include breakpoint(large) {
+      max-width: rem(450);
+      align-items: flex-start;
+      text-align: start;
+    }
   }
 
   &__heading {
     padding-inline: rem(54);
+
+    @include breakpoint(large) {
+      padding-inline: 0;
+    }
   }
 
   &__description {
-    max-width: rem(550);
     color: $clr-dark-grayish-blue;
-    padding: clamp(rem(24), 4.5vw, rem(30)) rem(40) clamp(rem(32), 6vw, rem(38));
     padding: rem(24) rem(40) rem(32);
 
     @include breakpoint(medium) {
+      padding-inline: rem(28);
+    }
 
+    @include breakpoint(large) {
+      padding-inline: 0;
     }
   }
 
   &__link {
     width: max-content;
     position: relative;
+    padding: 0 rem(8) rem(3);
 
     &:hover,
     &:focus-visible {
@@ -75,11 +93,10 @@
       width: 100%;
       height: rem(10);
       position: absolute;
-      bottom: rem(-3);
-      left: rem(-10);
+      bottom: 0;
+      left: 0;
       border-radius: rem(5);
-      padding-inline: rem(10);
-      transition: opacity 150ms;
+      transition: opacity 200ms;
       opacity: 0.3;
       z-index: -1;
       box-sizing: content-box;
