@@ -6,7 +6,7 @@
   align-items: center;
   background-color: $clr-ligh-cyan;
   color: $clr-dark-cyan;
-  padding: rem(64) rem(24) rem(24);
+  padding: rem(64) rem(24) rem(16);
 
   &__logo {
     color: inherit;
@@ -22,12 +22,14 @@
   }
 
   &__menu {
+    width: min(100%, rem(300));
     margin-block: rem(40) rem(90);
   }
 
   &__list {
     display: flex;
-    column-gap: rem(58);
+    justify-content: space-between;
+    column-gap: rem(24);
   }
 
   &__link {
@@ -52,6 +54,6 @@
 
   &__attribution {
     text-align: center;
-    padding-block-start: rem(24);
+    padding-block-start: rem(28);
   }
 }

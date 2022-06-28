@@ -4,8 +4,21 @@
   display: flex;
   flex-direction: column;
 
+  @include breakpoint(medium) {
+    flex-direction: row;
+  }
+
   &__card {
     position: relative;
+  }
+
+  &__picture {
+    max-height: rem(600);
+
+    img {
+      object-fit: cover;
+      object-position: center 45%;
+    }
   }
 
   &__content {

@@ -1,5 +1,23 @@
+@use '../util' as *;
+
 .projects {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+
+  @include breakpoint(medium) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__picture {
+    max-height: rem(300);
+
+    img {
+      object-fit: cover;
+      object-position: center 80%;
+    }
+
+    @include breakpoint(medium) {
+      max-height: none;
+    }
+  }
 }

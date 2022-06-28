@@ -8,7 +8,11 @@ body {
 
 p {
   font-size: rem(16);
-  line-height: rem(23.5);
+  line-height: 1.6em;
+
+  @include breakpoint(medium) {
+    font-size: clamp(rem(16), 2vw, rem(18));
+  }
 }
 
 h1,
@@ -21,10 +25,15 @@ figcaption,
 }
 
 .header__heading {
+  font-size: clamp(rem(32), 6vw, rem(42));
   font-size: rem(32);
-  letter-spacing: rem(5);
+  letter-spacing: em(2.5);
   text-transform: uppercase;
   color: $clr-white;
+
+  @include breakpoint(medium) {
+    font-size: rem(42);
+  }
 }
 
 .header__link {
@@ -40,19 +49,36 @@ figcaption,
 .about__heading {
   font-size: rem(28);
   color: $clr-very-dark-desaturated-blue;
+
+  @include breakpoint(medium) {
+    font-size: clamp(rem(28), 3.5vw, rem(32));
+  }
 }
 
 .about__link {
+  font-size: clamp(rem(16), 3vw, rem(18));
   font-size: rem(16);
   text-transform: uppercase;
   color: $clr-very-dark-desaturated-blue;
+
+  @include breakpoint(medium) {
+    font-size: clamp(rem(16), 2vw, rem(18));
+  }
 }
 
 .testimonials__heading {
-  font-size: rem(14);
-  letter-spacing: rem(3);
+  font-size: rem(16);
+  letter-spacing: em(2);
   text-transform: uppercase;
   color: $clr-grayish-blue;
+
+  @include breakpoint(medium) {
+    font-size: rem(18);
+  }
+}
+
+.testimonials__comment {
+  line-height: 1.6em;
 }
 
 .testimonials__occupation {

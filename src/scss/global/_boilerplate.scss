@@ -1,5 +1,9 @@
 @use '../util' as *;
 
+:root {
+  scroll-behavior: smooth;
+}
+
 *,
 *::before,
 *::after {

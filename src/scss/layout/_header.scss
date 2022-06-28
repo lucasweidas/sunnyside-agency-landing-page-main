@@ -3,57 +3,83 @@
 .header {
   height: rem(540);
   position: relative;
-  background: url('../images/mobile/image-header.jpg') center / cover no-repeat;
+  background: url('../images/mobile/image-header.jpg') center 70% / cover no-repeat;
   overflow-x: hidden;
+
+  @include breakpoint(medium) {
+    height: rem(650);
+    background-image: url('../images/desktop/image-header.jpg');
+  }
 
   &__top {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: rem(32) rem(24) 0;
+
+    @include breakpoint(medium) {
+      padding-inline: rem(32);
+    }
+  }
+
+  &__logo {
+
+    @include breakpoint(medium) {
+      svg {
+        width: rem(160);
+        height: rem(34);
+      }
+    }
   }
 
   &__menu-btn {
     width: max-content;
     height: max-content;
     display: flex;
+
+    @include breakpoint(medium) {
+      display: none;
+    }
   }
 
   &__nav {
-    width: min(100% - rem(48), rem(400));
-    position: absolute;
-    top: rem(106);
-    right: rem(24);
-    background-color: $clr-grayish-white;
-    visibility: hidden;
-    opacity: 0;
-    z-index: 100;
-    transition: opacity 300ms ease;
-
-    &::before {
-      content: '';
+    @include breakpoint-down(medium) {
+      width: min(100% - rem(48), rem(400));
       position: absolute;
-      display: block;
-      width: 0;
-      border-style: solid;
-      border-width: 0 0 rem(26) rem(26);
-      border-color: transparent transparent $clr-grayish-white transparent;
-      top: rem(-22);
-      right: 0;
-    }
+      top: rem(106);
+      right: rem(24);
+      background-color: $clr-grayish-white;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 100;
+      transition: opacity 300ms;
 
-    @keyframes slide-down {
-      from {
-        transform: translateY(-10%);
+      @keyframes slide-down {
+        from {
+          transform: translateY(-10%);
+        }
+        to {
+          transform: translateY(0);
+        }
       }
-      to {
-        transform: translateY(0);
-      }
-    }
 
-    .header.active & {
-      animation: slide-down 300ms ease forwards;
-      visibility: visible;
-      opacity: 1;
+      .header.active & {
+        animation: slide-down 300ms ease forwards;
+        visibility: visible;
+        opacity: 1;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0;
+        border-style: solid;
+        border-width: 0 0 rem(26) rem(26);
+        border-color: transparent transparent $clr-grayish-white transparent;
+        top: rem(-22);
+        right: 0;
+      }
     }
   }
 
@@ -61,26 +87,37 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: rem(28);
+    gap: rem(28) rem(32);
     padding: rem(42) rem(24) rem(38);
+
+    @include breakpoint(medium) {
+      flex-direction: row;
+      padding: 0;
+    }
   }
 
   &__link {
     position: relative;
     color: $clr-dark-grayish-blue;
     padding: rem(4);
+    
+    @include breakpoint(medium) {
+      &:not(&--contact) {
+        color: $clr-white;
 
-    @include breakpoint(large) {
-      &:not(&--contact)::after {
-        content: '';
-        width: 100%;
-        height: rem(4);
-        position: absolute;
-        bottom: 0;
-        background-color: currentColor;
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform 200ms;
+        &::after {
+          content: '';
+          width: 100%;
+          height: rem(4);
+          position: absolute;
+          bottom: rem(-2);
+          left: 0;
+          background-color: currentColor;
+          transform: scaleX(0);
+          transform-origin: left;
+          transition: transform 200ms;
+          opacity: 0.6;
+        }
       }
 
       &:not(&--contact):hover::after,
@@ -97,13 +134,15 @@
       background-color: $clr-yellow;
       color: $clr-black;
       border-radius: rem(33);
-      transition-duration: 200ms;
-      transition-property: color, background-color;
+      
+      @include breakpoint(medium) {
+        background-color: $clr-white;
+        transition-duration: 200ms;
+        transition-property: color, background-color;
 
-      @include breakpoint(large) {
         &:hover,
         &:focus-visible {
-          background-color: hsla(0, 0%, 100%, 0.2);
+          background-color: hsla(0, 0%, 100%, 0.3);
           color: $clr-white;
         }
       }
@@ -112,15 +151,15 @@
 
   &__bottom {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    row-gap: rem(58);
     position: relative;
     text-align: center;
     margin-block-start: rem(98);
   }
 
   &__arrow {
-    position: absolute;
-    bottom: rem(-170);
     animation: move-arrow 4000ms ease-in-out infinite;
 
     @keyframes move-arrow {

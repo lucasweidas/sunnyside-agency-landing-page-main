@@ -4,20 +4,44 @@
   &__box {
     display: flex;
     flex-direction: column;
+    align-items: center;
+
+    @include breakpoint(medium) {
+      flex-direction: row;
+
+      &--transform {
+        flex-direction: row-reverse;
+      }
+    }
   }
 
   &__picture {
     width: 100%;
+    max-height: rem(400);
     display: flex;
+
+    @include breakpoint(medium) {
+      max-height: none;
+    }
 
     img {
       width: 100%;
+      object-fit: cover;
     }
   }
 
   &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     padding-block: rem(70);
+
+    @include breakpoint(medium) {
+      padding-block: 0;
+    }
   }
 
   &__heading {
@@ -25,11 +49,18 @@
   }
 
   &__description {
+    max-width: rem(550);
     color: $clr-dark-grayish-blue;
+    padding: clamp(rem(24), 4.5vw, rem(30)) rem(40) clamp(rem(32), 6vw, rem(38));
     padding: rem(24) rem(40) rem(32);
+
+    @include breakpoint(medium) {
+
+    }
   }
 
   &__link {
+    width: max-content;
     position: relative;
 
     &:hover,
