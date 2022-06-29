@@ -3,12 +3,12 @@
 .header {
   height: rem(540);
   position: relative;
-  background: url('../images/mobile/image-header.jpg') center 70% / cover no-repeat;
+  background: url('./../images/mobile/image-header.jpg') center 70% / cover no-repeat;
   overflow-x: hidden;
 
   @include breakpoint(medium) {
     height: rem(700);
-    background-image: url('../images/desktop/image-header.jpg');
+    background-image: url('./../images/desktop/image-header.jpg');
   }
 
   @include breakpoint(large) {
