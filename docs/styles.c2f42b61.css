@@ -319,6 +319,9 @@ figcaption,
     margin-block-start: 6.875rem;
   }
 }
+.header__heading {
+  padding-inline: 1.5rem;
+}
 .header__arrow {
   animation: move-arrow 4000ms ease-in-out infinite;
 }
@@ -608,4 +611,4 @@ figcaption,
   padding-block-start: 1.75rem;
 }
 
-/*# sourceMappingURL=styles.c1ccfbe7.css.map */
+/*# sourceMappingURL=styles.c2f42b61.css.map */
