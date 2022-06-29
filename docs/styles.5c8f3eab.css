@@ -159,13 +159,13 @@ figcaption,
 .header {
   height: 33.75rem;
   position: relative;
-  background: url("/image-header.dab4d08b.jpg") center 70%/cover no-repeat;
+  background: url("./image-header.dab4d08b.jpg") center 70%/cover no-repeat;
   overflow-x: hidden;
 }
 @media (min-width: 48em) {
   .header {
     height: 43.75rem;
-    background-image: url("/image-header.ffd6b8fd.jpg");
+    background-image: url("./image-header.ffd6b8fd.jpg");
   }
 }
 @media (min-width: 64em) {
